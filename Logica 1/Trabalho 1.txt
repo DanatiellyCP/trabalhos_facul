@@ -7,7 +7,7 @@ sabiamente o caminho a seguir, enfrentando desafios e tomando decisões que impa
 sua pontuação final.
 Prepare-se para esta aventura cheia de mistérios!
  */
-programa {
+programa1{
   cadeia TextoPrincipal
   funcao inicio() {
     cadeia Menu1
