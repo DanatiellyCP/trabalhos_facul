@@ -8,6 +8,55 @@ sabiamente o caminho a seguir, enfrentando desafios e tomando decisões que impa
 sua pontuação final.
 Prepare-se para esta aventura cheia de mistérios!
  */
+   
+   	 // iniciando com 10 pontos para o jogador
+      inteiro pontos = 10 //minimo 10 pontos maximo 110
+
+       funcao inicio(){
+       	cadeia TextoPrincipal
+       	inteiro continuar = 1
+    		cadeia Menu1 = ""
+    		TextoPrincipal = " Você é um explorador corajoso que se aventura em uma misteriosa Floresta Sussurrante em busca de \n" 
+    		TextoPrincipal =  TextoPrincipal + " tesouros lendários e segredos perdidos. Ao adentrar na floresta você se depara com três caminhos \n" 
+    		TextoPrincipal =  TextoPrincipal + " diferentes cada um levando a uma parte desconhecida e perigosa da floresta. \n" 
+    
+    		escreva (TextoPrincipal, "\n \n")  
+    
+    		escreva ("Deseja iniciar o Jogo?  \n [Sim]: Para iniciar. \n [Não]: Para Sair do jogo. \n")
+    		leia (Menu1)
+
+		//incia o jogo
+    		se (Menu1 == "Sim"){ 
+       		faca{
+       			escreva("Deseja continuar? \n Se Sim Digite [1]. \n Se Não Digite [2] \n Sua Pontuação Atual: [" + pontos + "]\n")
+       			leia(continuar)
+
+       			se (continuar == 1){
+       				continuar = jogar()
+       			} 
+            senao{
+       				escreva ("Jogo Finalizado pelo jogador. \n\n")
+
+              escreva("\n *********************************************** \n")
+              escreva(" Fim de Jogo! \n")
+              //exibir a pontuação do jogador
+              escreva(" Essa é a sua pontuação final: [" + pontos + "]\n\n")
+              escreva("\n *********************************************** \n")
+       			}	
+       		} enquanto (continuar != 2)
+          escreva(" Fim de Jogo! \n")
+          //exibir a pontuação do jogador
+          escreva(" Essa é a sua pontuação final: [" + pontos + "]\n\n")
+    		}
+    		
+       //Sai do jogo
+       se (Menu1 == "Não"){
+      		escreva ("Jogo Finalizado pelo jogador. \n\n")
+      	}
+       }
+      
+     
+  
  	funcao cadeia Caminhos(inteiro c){
  		//função para exibir os caminhos possiveis
 		cadeia cam = ""
@@ -15,18 +64,18 @@ Prepare-se para esta aventura cheia de mistérios!
  		
  		se (c == 1){
 			cam = "******* Caminho 1: O Caminho das Sombras ******* \n"
-			descricao = "Este caminho é cercado por árvores antigas e sombrias, com raios de lua penetrando entre os \n" 
+			descricao = " Este caminho é cercado por árvores antigas e sombrias, com raios de lua penetrando entre os \n" 
 			descricao = descricao + "galhos. Parece ser o caminho mais misterioso e perigoso da floresta. \n"
  		}
  		se (c==2){
- 			cam = "******* Caminho 2: O Caminho da Luz *******"
- 			descricao = "Este caminho é iluminado por raios de sol que filtram entre as copas das árvores. Parece ser o \n" 
-			descricao = descricao + "caminho mais seguro e reconfortante da floresta. \n" 
+ 			cam = "******* Caminho 2: O Caminho da Luz ******* \n"
+ 			descricao = " Este caminho é iluminado por raios de sol que filtram entre as copas das árvores. \n" 
+			descricao = descricao + "Parece ser o caminho mais seguro e reconfortante da floresta. \n" 
  			}
  		se (c == 3){
- 			cam = "******* Caminho 3: O Caminho das Criaturas *******"
-			descricao = " Este caminho é repleto de sons estranhos e pegadas misteriosas no chão. Parece ser o caminho mais imprevisível e enigmático da floresta. \n "
- 			descricao = descricao + "Você se depara com uma criatura mágica adormecida bloqueando o caminho."
+ 			cam = 				"******* Caminho 3: O Caminho das Criaturas ******* \n"
+			descricao = 			" Este caminho é repleto de sons estranhos e pegadas misteriosas no chão. \n"
+			descricao = descricao +	" Parece ser o caminho mais imprevisível e enigmático da floresta. \n "
  			
  			}
  		retorne  cam + descricao
@@ -34,24 +83,32 @@ Prepare-se para esta aventura cheia de mistérios!
  	}
 
  	funcao inteiro Obst(inteiro op){
- 		// função obstaculos para exibir o obstaculo de acordo com a opção de caminho escolhido
+ 		// função de obstáculos para exibir o obstaculo de acordo com a opção de caminho escolhido
  		cadeia desafio = ""
  		inteiro ret = 0
  		
 	 	escolha(op){
-	 	caso 1: desafio =  "Você encontra uma criatura mágica guardiã do caminho, que exige um enigma para deixá-lo \n"
-			desafio = desafio + "passar. O enigma é: 'Quem sou eu? Tenho olhos, mas não vejo. Tenho boca, mas não falo. O que sou? \n"
-			desafio = desafio + "[1]: Caveira \n [2]: Zombie \n"
-			ret = 1
+	 	caso 1: desafio =  "\n    Você encontra uma criatura mágica guardiã do caminho, que exige um enigma para deixá-lo \n"
+			desafio = desafio +  "passar. O enigma é: 'Quem sou eu? Tenho olhos, mas não vejo. Tenho boca, mas não falo. O que sou? \n"
+			desafio = desafio +  " [1]: Caveira \n"
+			desafio = desafio +  " [2]: Zombie \n"
+			escreva(desafio + " \n")
+			leia(ret)
 		pare
 		
-		caso 2: desafio = " Você encontra uma ponte quebrada sobre um rio turbulento. E deve decidir se:\n" 
-			   desafio = desafio + "[1]:Tentará atravessar a ponte quebrada? \n[2]: Procurará um desvio seguro.\n" 
-    			  ret = 2
+		caso 2: desafio = 			" \n Você encontra uma ponte quebrada sobre um rio turbulento. E deve decidir se:\n" 
+			   desafio = desafio + 	" [1]:Tentará atravessar a ponte quebrada? \n" 
+			   desafio = desafio + 	" [2]: Procurará um desvio seguro. \n" 
+    			   escreva(desafio + " \n")
+    			   leia(ret)
     		pare
 
-    		caso 3: desafio = "Decida se: [1] Tentará contornar a criatura com cuidado \n [2] Acordar a criatura para passar."
-    			ret = 3
+    		caso 3: desafio = 			" \n Você se depara com uma criatura mágica adormecida bloqueando o caminho. \n"
+    			   desafio = desafio + 	" E terá que decidir se: \n "
+    			   desafio = desafio +   " [1] Tentará contornar a criatura com cuidado. \n" 
+    			   desafio = desafio +   " [2] Acordar a criatura para passar. \n"
+    			   escreva(desafio  + " \n")
+    			   leia(ret)
     		pare
     		caso contrario: 
     			desafio = "Você não escolheu nehum desáfio - Jogo encerrado"
@@ -62,89 +119,62 @@ Prepare-se para esta aventura cheia de mistérios!
  		
  		}
  
-  cadeia TextoPrincipal
-  funcao inicio() {
-    cadeia Menu1 = ""
-    inteiro caminho = 0
-    TextoPrincipal = "Você é um explorador corajoso que se aventura em uma misteriosa Floresta Sussurrante em busca de \n" 
-    TextoPrincipal =  TextoPrincipal + " tesouros lendários e segredos perdidos. Ao adentrar na floresta você se depara com três caminhos \n" 
-    TextoPrincipal =  TextoPrincipal + "diferentes cada um levando a uma parte desconhecida e perigosa da floresta. \n" 
-	
-    
-    
-    escreva (TextoPrincipal, "\n \n")  
-    
-    escreva ("Deseja iniciar o Jogo?  \n")
-    leia (Menu1)
-
-    se (Menu1 == "sim"){ 
-      escreva ("Muito bem vamos iniciar nossa aventura... \n")
+  
+  funcao inteiro jogar() {
+	inteiro caminho = 0
+  	
+      escreva (" *** Muito bem! Vamos iniciar nossa aventura... *** \n")
       escreva (" Escolha um caminho: \n")
-      escreva (" Caminho 1: O Caminho das Sombras \n")
-      escreva (" Caminho 2: O Caminho da Luz \n")
-      escreva (" Caminho 3: O Caminho das Criaturas  \n")
+      escreva (" Caminho [1]: O Caminho das Sombras \n")
+      escreva (" Caminho [2]: O Caminho da Luz \n")
+      escreva (" Caminho [3]: O Caminho das Criaturas  \n")
+      
       inteiro escolha_caminho
 	 leia(escolha_caminho)
 	 
       escreva("\n" + Caminhos(escolha_caminho))
       inteiro resp =  Obst(escolha_caminho)
 
-	 // inicianto com 10 pontos para o jogador
-      inteiro pontos = 10
-
       se (escolha_caminho == 1){
       	se (resp == 1){
-      		escreva(" Muito bem! Você respondeu certo \n A criatura mágica lhe entrega um baú contendo  uma gema preciosa que vale 100 pontos **")
+      		escreva(" \n Muito bem! Você respondeu certo. \n" + 
+      			   " A criatura mágica lhe entrega um baú, contendo uma gema preciosa que vale 100 pontos ** \n\n")
       		pontos = pontos + 100
       		}senao{
-      			escreva("óhh Não! resposta errada, você perdeu 5 pontos")
+      			escreva(" \n Óhh Não! resposta errada. Você perdeu 5 pontos \n\n")
       			pontos = pontos - 5
       			}
       	}
 
       se (escolha_caminho == 2){
       	se (resp == 1){
-      		escreva("Muito Bem! Você atravessar a ponte quebrada com sucesso, ele encontra uma fonte mágica  que restaura sua saúde e adiciona 50 pontos à sua pontuação.\n \n")
+      		escreva(" Muito Bem! Você atravessou a ponte quebrada com sucesso, " 
+      		+ "e encontrou uma fonte mágica, que restaura sua saúde e, adiciona 50 pontos à sua pontuação.\n \n")
       		pontos = pontos + 50
       		}senao{
-      			escreva("Infelizmente contornando a ponte, você se  depara com um abismo, e terá que voltar. \n \n")
+      			escreva("\n Infelizmente contornando a ponte, você se  depara com um abismo, e terá que voltar. " 
+      			+ " você perdeu 5 pontos \n \n")
       			pontos = pontos -5
       			}
       	}
-      se (escolha_caminho == 1){
+      se (escolha_caminho == 3){
       	se (resp == 1){
-      		escreva("Você encontrou uma árvore encantada que concede a ele uma habilidade especial de camuflagem, adicionando 75 pontos à sua pontuação. \n \n")
+      		escreva("Você encontrou uma árvore encantada, que te concede uma habilidade especial " +
+      		       "de camuflagem, adicionando 75 pontos, à sua pontuação. \n \n")
       		pontos = pontos + 75
-      		}senao{
-      			escreva("Óhhh não, você não deveria ter acordado a criatura mágica, ela te feriu e você perdeu 10 pontos")
+      	}senao{
+      		escreva("Óhhh não, você não deveria ter acordado a criatura mágica,\n ela te feriu e você perdeu 10 pontos \n\n")
       			
-      			}
+      		}
       	}
-
-     //exibir a pontuação
-     escreva("Fim de Jogo essa é a sua pontuaçã \n")
-     escreva(pontos)
-       
+        se (pontos == 110){
+          retorne 2
+        } senao{
+          retorne 1
+        }
+         
+    }
    
 
-    }
-    se (Menu1 == "Não")
-    {
-      escreva ("Você saiu do jogo ); ")
-    }
-
-  
   }
-}
 
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 5153; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
