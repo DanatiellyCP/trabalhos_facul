@@ -1,0 +1,12 @@
+Aluno: Matheus
+Media Geral: 10,00
+classificacao: Aprovado
+
+Aluno: Renato
+Media Geral: 6,50
+classificacao: Aprovado
+
+Aluno: Bruno
+Media Geral: 4,00
+classificacao: Reprovado
+
