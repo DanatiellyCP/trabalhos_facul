@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ação Geek</title>
+    <link rel="stylesheet" type="text/css" href="css/estyles.css" media="screen" />
+    <!-- Parte do Bootstrap --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="ClassBody" style="max-width: 95vw;">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li onclick="MudaTexto('txtrect', 1)"><a href="#">Ação Geek</a></li>
+              <li onclick="MudaTexto('txtrect', 2)"><a href="#">Campanha</a></li>
+              <li onclick="MudaTexto('txtrect', 3)"><a href="#">Saiba Mais</a></li>
+              <li onclick="MudaTexto('txtrect', 4)"><a href="#">Mascote</a></li>
+              <li onclick="MudaTexto('txtrect', 5)"><a href="#">Sobre o Projeto</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+          </div>
+        
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6"> 
+                <section id="conteudo">
+                    <div id="texto">
+                        <text id="txtrect" x="5" y="35" font-family="Verdana" font-size="11" fill="white">
+                            <h1>Ação Geek</h1>
+                            <p>
+                                A ação Geek é um projeto social, de conscientização sobre a importância da 
+                                reciclagem e, do descarte correto de lixo eletrônico.
+                            </p>
+                            <p>
+                                Unindo forças com as comunidades, escolas, estudantes e organizações sociais, 
+                                a fim de estabelecer uma cultura permanente de descarte de materiais recicláveis. 
+                                Visando melhorar a qualidade de vida, e a preservação do meio ambiente.
+                            </p>
+                        </text>
+                    </div>  
+                </section>
+            </div>
+
+            <div class="col-sm-6">
+                <section>
+                    <div id="" align="center">
+                        <img id="imagem" src="images/ideia2.png" height="300px" width="300px">
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-6">
+                <section> 
+                    <div  align="center" id="lin">Para saber mais</div>
+                    <ul style="list-style-type:disc;">
+                        <li><a href="https://csoambiental.com.br/" target="_blank"> Sistema Coleta Eco Pontos</a></li>
+                        <li><a href="https://www.unep.org/pt-br" target="_blank"> ONU </a></li>
+                        <li><a href="https://www.gov.br/mma/pt-br" target="_blank">Ministério do Meio Ambiente e Mudança do Clima</a></li>
+                        <li><a href="https://news.un.org/pt/story/2022/01/1777952" target="_blank">97% do lixo eletrônico da América Latina não é descartado de forma sustentável</a></li>
+                        <li><a href="https://www.wwf.org.br/nosso_trabalho/pegada_ecologica/" target="_blank">Pegada Ambiental</a></li>
+                        <li><a href="https://sebrae.com.br/sites/PortalSebrae/artigos/como-medir-a-pegada-ecologica-da-sua-empresa,1061d860a9757810VgnVCM1000001b00320aRCRD" target="_blank">Como medir a pegada ecológica da sua empresa</a></li> 
+                        <li><a href="https://www.youtube.com/watch?v=NNvvZjVSp9M&ab_channel=Ci%C3%AAnciaTodoDia" target="_blank">Video: Ciência Todo Dia</a></li>
+                        </li>  <li><a href="https://www.youtube.com/watch?v=52pfRQawboA&ab_channel=GovernodoEstadodeS%C3%A3oPaulo" target="_blank">Video: Lixo eletrônico: entenda a importância de descartar corretamente</a></li>                                
+                    </ul>  
+                </section>
+            </div>
+            <div class="col-sm-6"> 
+                <section>
+                    <div >
+                       <h2> <img src="images/gui.png" height="200px" width="200px"> </h2> 
+                    </div>
+                </section>  
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+<script src="js/scripts.js"></script>
+</html>
